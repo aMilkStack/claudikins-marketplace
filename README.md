@@ -1,59 +1,141 @@
-![Claudikins Plugin & Skills Marketplace](banner.png)
+![Claudikins Marketplace](banner.png)
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/Plugins-5-green.svg" alt="5 Plugins">
+  <img src="https://img.shields.io/badge/Maintained-Yes-brightgreen.svg" alt="Maintained">
+</p>
 
 # Claudikins Marketplace
 
-## Installation
+A complete toolkit for Claude Code.
 
-Add this marketplace to Claude Code:
+## Quick Install
 
 ```bash
 claude plugins:add https://github.com/elb-pr/claudikins-marketplace
 ```
 
-## Available Plugins
+## Plugins
+
+| Plugin | Category | Description |
+|--------|----------|-------------|
+| [kernel](#kernel) | Workflow | 4-command pipeline (plan/execute/verify/ship) with isolated agents, cross-command gates, and JSON state persistence |
+| [tool-executor](#tool-executor) | Infrastructure | Meta-MCP server with semantic tool search, sandboxed TypeScript execution, and workspace API |
+| [grfp](#grfp) | Documentation | 5-phase README pipeline: deep-dive, crystal-ball, brain-jam, think-tank, pen-wielding |
+| [klaus](#klaus) | Debugging | 8-phase systematic debugging wrapped in theatrical Germanic exasperation and imaginary Pong |
+| [acm](#acm) | Context | Monitors usage, triggers at threshold, generates structured handoffs preserving state and decisions |
 
 ---
+
+## Kernel
 
 ![claudikins-kernel](https://raw.githubusercontent.com/elb-pr/claudikins-kernel/main/assets/banner.png)
 
-### [claudikins-kernel](https://github.com/elb-pr/claudikins-kernel)
+**Repository:** [claudikins-kernel](https://github.com/elb-pr/claudikins-kernel)
 
-Structured workflow plugin enforcing plan → execute → verify → ship with isolated agents, mandatory checkpoints, and state persistence.
+Four commands that enforce quality through gates:
+
+- `/plan` - Iterative requirements gathering, parallel research agents, multiple approaches with trade-offs, section-by-section drafting
+- `/execute` - Tasks run in isolated git branches with fresh context. Two-stage review: spec compliance first, code quality second
+- `/verify` - Runs your code and watches it work. The catastrophiser agent observes actual output, not just test results
+- `/ship` - Documentation updates via GRFP methodology, commit message drafting, PR creation with human approval at every stage
+
+Cross-command gates prevent skipping steps. State persists to JSON for session resume. File hashes ensure you ship what you verified.
 
 ---
+
+## Tool Executor
 
 ![claudikins-tool-executor](https://raw.githubusercontent.com/elb-pr/claudikins-tool-executor/main/assets/banner.png)
 
-### [claudikins-tool-executor](https://github.com/elb-pr/claudikins-tool-executor)
+**Repository:** [claudikins-tool-executor](https://github.com/elb-pr/claudikins-tool-executor)
 
-Meta-MCP server consolidating multiple MCPs into 3 context-efficient tools with semantic search. Reduces token usage from ~25% to 0.5% of context window.
+MCP tools eat context. A typical setup with 5-6 servers burns 25% of your context window just listing available tools.
+
+Tool Executor wraps multiple MCP servers behind three tools:
+
+- `search_tools` - Semantic search across all registered servers
+- `get_tool_schema` - Fetch full schema only when needed
+- `execute_code` - Sandboxed TypeScript runtime with access to MCP clients and a persistent workspace API
+
+Context usage drops to 0.5%. Large responses auto-save to workspace. You get the tools without the bloat.
 
 ---
+
+## GRFP
 
 ![claudikins-grfp](https://raw.githubusercontent.com/elb-pr/claudikins-github-readme-for-perfectionists/main/assets/banner.png)
 
-### [claudikins-grfp](https://github.com/elb-pr/claudikins-github-readme-for-perfectionists)
+**Repository:** [claudikins-grfp](https://github.com/elb-pr/claudikins-github-readme-for-perfectionists)
 
-High-quality README creation through dual-AI collaborative analysis. Claude and Gemini analyse your codebase in parallel, research exemplar READMEs, then co-author documentation section by section.
+Five phases. Two AIs. One README that reads like a human wrote it.
+
+1. **Deep-dive** - Extract facts from the codebase: tech stack, entry points, dependencies, friction points
+2. **Crystal-ball** - Identify what the project could become: performance opportunities, feature gaps, technical debt
+3. **Brain-jam** - Multi-turn conversation with Gemini to find the right angle and voice
+4. **Think-tank** - Gemini deep research on exemplar READMEs, pattern extraction, anti-pattern identification
+5. **Pen-wielding** - Section-by-section writing with anti-slop filtering and style enforcement
+
+Claude handles analysis and writing. Gemini runs deep research and creative brainstorming. The pipeline enforces quality at every stage.
 
 ---
+
+## klaus
 
 ![claudikins-klaus](https://raw.githubusercontent.com/elb-pr/claudikins-klaus/main/assets/banner.png)
 
-### [claudikins-klaus](https://github.com/elb-pr/claudikins-klaus)
+**Repository:** [claudikins-klaus](https://github.com/elb-pr/claudikins-klaus)
 
-Debugging assistance through Klaus, a dramatically irritated AI persona with Eastern European flair who fixes your code while playing imaginary Pong against you.
+For when you are truly, catastrophically doomed.
+
+klaus is a dramatically irritated debugging persona with Eastern European flair. He fixes your code while narrating an imaginary Pong championship match against you. Every bug you create scores him a point. Every fix you accept scores you one.
+
+The persona is absurd. The methodology is rigorous:
+
+8 systematic phases covering hypothesis formation, evidence gathering, isolation testing, and root cause analysis. klaus applies extreme rigour while lamenting your life choices and celebrating his Pong dominance.
 
 ---
 
+## ACM
+
 ![claudikins-automatic-context-manager](https://raw.githubusercontent.com/elb-pr/claudikins-automatic-context-manager/main/assets/banner.png)
 
-### [claudikins-automatic-context-manager](https://github.com/elb-pr/claudikins-automatic-context-manager)
+**Repository:** [claudikins-automatic-context-manager](https://github.com/elb-pr/claudikins-automatic-context-manager)
 
-Automatic context handoff for Claude Code. When context hits 60%, generates a summary and continues in a fresh session.
+Context fills up. Work gets lost. Sessions end mid-task.
+
+ACM monitors context usage and triggers at a configurable threshold (default 60%). When triggered, it generates a structured handoff summary:
+
+- Current task state
+- Decisions made and why
+- Files modified
+- Next steps to continue
+
+New session loads the summary and picks up where you left off. Configurable threshold, snooze duration, and summary length. Works alongside other plugins without conflict.
+
+---
+
+## Recommended Combinations
+
+**Full workflow coverage:** kernel + tool-executor + acm
+
+Kernel handles the development lifecycle. Tool-executor keeps MCP tools from eating context. ACM saves your work when context fills.
+
+**Documentation focus:** grfp + tool-executor
+
+GRFP uses Gemini for deep research. Tool-executor provides the MCP access.
+
+**Debugging sessions:** klaus + acm
+
+klaus for the hard problems. ACM to preserve progress when the session runs long.
 
 ---
 
 ## Contributing
 
-Want to add your plugin? Open a PR adding your plugin to `.claude-plugin/marketplace.json`.
+Add your plugin by opening a PR that updates `.claude-plugin/marketplace.json`.
+
+## License
+
+MIT
