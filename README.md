@@ -18,13 +18,13 @@ claude plugins:add https://github.com/elb-pr/claudikins-marketplace
 
 ## Plugins
 
-| Plugin | Category | Description |
-|--------|----------|-------------|
-| [kernel](#kernel) | Workflow | 4-command pipeline (plan/execute/verify/ship) with isolated agents, cross-command gates, and JSON state persistence |
-| [tool-executor](#tool-executor) | Infrastructure | Meta-MCP server with semantic tool search, sandboxed TypeScript execution, and workspace API |
-| [grfp](#grfp) | Documentation | 5-phase README pipeline: deep-dive, crystal-ball, brain-jam, think-tank, pen-wielding |
-| [klaus](#klaus) | Debugging | 8-phase systematic debugging wrapped in theatrical Germanic exasperation and imaginary Pong |
-| [acm](#acm) | Context | Monitors usage, triggers at threshold, generates structured handoffs preserving state and decisions |
+| Plugin                          | Category       | Description                                                                                         |
+| ------------------------------- | -------------- | --------------------------------------------------------------------------------------------------- |
+| [kernel](#kernel)               | Workflow       | 4-command pipeline with isolated agents, cross-command gates, and JSON state persistence            |
+| [tool-executor](#tool-executor) | Infrastructure | Meta-MCP server with semantic tool search, sandboxed TypeScript execution, and workspace API        |
+| [grfp](#grfp)                   | Documentation  | 5-phase README pipeline: deep-dive, crystal-ball, brain-jam, think-tank, pen-wielding               |
+| [klaus](#klaus)                 | Debugging      | 8-phase systematic debugging wrapped in theatrical Germanic exasperation and imaginary Pong         |
+| [acm](#acm)                     | Context        | Monitors usage, triggers at threshold, generates structured handoffs preserving state and decisions |
 
 ---
 
@@ -36,10 +36,10 @@ claude plugins:add https://github.com/elb-pr/claudikins-marketplace
 
 Four commands that enforce quality through gates:
 
-- `/plan` - Iterative requirements gathering, parallel research agents, multiple approaches with trade-offs, section-by-section drafting
-- `/execute` - Tasks run in isolated git branches with fresh context. Two-stage review: spec compliance first, code quality second
-- `/verify` - Runs your code and watches it work. The catastrophiser agent observes actual output, not just test results
-- `/ship` - Documentation updates via GRFP methodology, commit message drafting, PR creation with human approval at every stage
+- `/claudikins:kernel-plan` - Iterative requirements gathering, parallel research agents, multiple approaches with trade-offs, section-by-section drafting
+- `/claudikins:kernel-execute` - Tasks run in isolated git branches with fresh context. Two-stage review: spec compliance first, code quality second
+- `/claudikins:kernel-verify` - Runs your code and watches it work. The catastrophiser agent observes actual output, not just test results
+- `/claudikins:kernel-ship` - Documentation updates via GRFP methodology, commit message drafting, PR creation with human approval at every stage
 
 Cross-command gates prevent skipping steps. State persists to JSON for session resume. File hashes ensure you ship what you verified.
 
