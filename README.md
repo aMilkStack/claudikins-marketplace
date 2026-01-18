@@ -16,6 +16,38 @@ A complete toolkit for Claude Code.
 claude plugins:add https://github.com/elb-pr/claudikins-marketplace
 ```
 
+## Plugin Ecosystem
+
+```mermaid
+flowchart TB
+    subgraph core[" "]
+        kernel["kernel<br/>(workflow)"]
+    end
+
+    toolexec["tool-executor<br/>(infrastructure)"]
+    grfp["grfp<br/>(documentation)"]
+    klaus["klaus<br/>(debugging)"]
+    acm["acm<br/>(context)"]
+
+    kernel -.->|recommended| toolexec
+    kernel -.->|recommended| klaus
+    toolexec -->|enhances| grfp
+    toolexec <-->|synergy| acm
+
+    acm -.->|enhances| kernel
+    acm -.->|enhances| toolexec
+    acm -.->|enhances| grfp
+    acm -.->|enhances| klaus
+
+    style kernel fill:#4a9eff,stroke:#2a7edf,color:#fff
+    style acm fill:#9b59b6,stroke:#7b39a6,color:#fff
+    style toolexec fill:#2ecc71,stroke:#1eac51,color:#fff
+    style grfp fill:#f39c12,stroke:#d38c02,color:#fff
+    style klaus fill:#e74c3c,stroke:#c72c1c,color:#fff
+```
+
+**kernel** is the recommended starting point - it orchestrates the full development workflow. **tool-executor** provides MCP infrastructure that enhances grfp's Gemini integration. **acm** preserves context across all plugins. **klaus** pairs well with kernel for debugging sessions.
+
 ## Plugins
 
 | Plugin                          | Category       | Description                                                                                         |
