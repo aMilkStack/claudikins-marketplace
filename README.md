@@ -96,7 +96,7 @@ Choose your path based on what you want to accomplish.
 
 **For:** Users who want structured planning, execution, and shipping.
 
-**Install:** kernel, tool-executor, acm
+**Install:** claudikins-kernel, claudikins-tool-executor, claudikins-automatic-context-manager
 
 **What you get:** 4-command pipeline (plan, execute, verify, ship), MCP tool access without context bloat, and automatic context preservation for long sessions.
 
@@ -104,7 +104,7 @@ Choose your path based on what you want to accomplish.
 
 **For:** Users who want high-quality READMEs.
 
-**Install:** grfp, tool-executor
+**Install:** claudikins-grfp, claudikins-tool-executor
 
 **What you get:** 5-phase README pipeline (deep-dive, crystal-ball, brain-jam, think-tank, pen-wielding) with Gemini-powered research and creative brainstorming.
 
@@ -112,7 +112,7 @@ Choose your path based on what you want to accomplish.
 
 **For:** Users tackling hard bugs.
 
-**Install:** klaus, acm
+**Install:** claudikins-klaus, claudikins-automatic-context-manager
 
 **What you get:** 8-phase systematic debugging methodology, plus context preservation for long debugging sessions.
 
