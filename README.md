@@ -231,7 +231,8 @@ New session loads the summary and picks up where you left off. Configurable thre
 
 ---
 
-## Recommended Combinations
+<details>
+<summary><strong>Recommended Combinations</strong></summary>
 
 **Full workflow coverage:** kernel + tool-executor + acm
 
@@ -245,9 +246,12 @@ GRFP uses Gemini for deep research. Tool-executor provides the MCP access.
 
 klaus for the hard problems. ACM to preserve progress when the session runs long.
 
+</details>
+
 ---
 
-## Contributing
+<details>
+<summary><strong>Contributing</strong></summary>
 
 Want to add your plugin to the marketplace? Here's what you need.
 
@@ -278,6 +282,8 @@ Want to add your plugin to the marketplace? Here's what you need.
 3. Open a PR with a brief description of your plugin
 
 That's it. We'll review and merge if everything looks good.
+
+</details>
 
 ## License
 
