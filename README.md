@@ -148,6 +148,8 @@ Four commands that enforce quality through gates:
 
 Cross-command gates prevent skipping steps. State persists to JSON for session resume. File hashes ensure you ship what you verified.
 
+**Works best with:** [tool-executor](#tool-executor) (MCP access), [klaus](#klaus) (debugging), [acm](#acm) (context preservation). Kernel is recommended for all plugins.
+
 ---
 
 ## Tool Executor
@@ -165,6 +167,8 @@ Tool Executor wraps multiple MCP servers behind three tools:
 - `execute_code` - Sandboxed TypeScript runtime with access to MCP clients and a persistent workspace API
 
 Context usage drops to 0.5%. Large responses auto-save to workspace. You get the tools without the bloat.
+
+**Works best with:** [kernel](#kernel) (workflow orchestration), [grfp](#grfp) (Gemini access), [acm](#acm) (synergy - context efficiency meets preservation).
 
 ---
 
@@ -184,6 +188,8 @@ Five phases. Two AIs. One README that reads like a human wrote it.
 
 Claude handles analysis and writing. Gemini runs deep research and creative brainstorming. The pipeline enforces quality at every stage.
 
+**Works best with:** [tool-executor](#tool-executor) (strongly recommended for Gemini MCP access). Can run standalone but benefits significantly from tool-executor.
+
 ---
 
 ## klaus
@@ -199,6 +205,8 @@ klaus is a dramatically irritated debugging persona with Eastern European flair.
 The persona is absurd. The methodology is rigorous:
 
 8 systematic phases covering hypothesis formation, evidence gathering, isolation testing, and root cause analysis. klaus applies extreme rigour while lamenting your life choices and celebrating his Pong dominance.
+
+**Works best with:** [kernel](#kernel) (debugging companion for kernel workflows), [acm](#acm) (preserves progress in long sessions). Recommended for kernel users.
 
 ---
 
@@ -218,6 +226,8 @@ ACM monitors context usage and triggers at a configurable threshold (default 60%
 - Next steps to continue
 
 New session loads the summary and picks up where you left off. Configurable threshold, snooze duration, and summary length. Works alongside other plugins without conflict.
+
+**Works best with:** All plugins - ACM enhances everything by preserving context across sessions. Particularly strong synergy with [tool-executor](#tool-executor).
 
 ---
 
