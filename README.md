@@ -24,7 +24,6 @@ A complete toolkit for Claude Code.
 - [klaus](#klaus)
 - [ACM](#acm)
 - [Recommended Combinations](#recommended-combinations)
-- [Contributing](#contributing)
 - [License](#license)
 
 </details>
@@ -249,41 +248,6 @@ klaus for the hard problems. ACM to preserve progress when the session runs long
 </details>
 
 ---
-
-<details>
-<summary><strong>Contributing</strong></summary>
-
-Want to add your plugin to the marketplace? Here's what you need.
-
-### Plugin Requirements
-
-- **Own repository** - Your plugin must be hosted in its own git repository
-- **README** - Include installation instructions and usage documentation
-- **Claude Code conventions** - Follow the standard plugin structure (commands in `commands/`, skills in `skills/`)
-- **Description** - Keep it under 100 characters for display in the marketplace
-
-### Submission Process
-
-1. Fork this repository
-2. Add your plugin to `.claude-plugin/marketplace.json`:
-
-```json
-{
-  "name": "your-plugin-name",
-  "source": {
-    "source": "url",
-    "url": "https://github.com/your-username/your-plugin.git"
-  },
-  "description": "Brief description of what your plugin does.",
-  "version": "1.0.0"
-}
-```
-
-3. Open a PR with a brief description of your plugin
-
-That's it. We'll review and merge if everything looks good.
-
-</details>
 
 ## License
 
