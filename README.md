@@ -16,6 +16,18 @@ A complete toolkit for Claude Code.
 claude plugins:add https://github.com/elb-pr/claudikins-marketplace
 ```
 
+## Prerequisites
+
+Claude Code is required for all plugins (latest version recommended).
+
+| Plugin        | Requirements                                                |
+| ------------- | ----------------------------------------------------------- |
+| kernel        | `jq`, `git`, `sha256sum`, `find`                            |
+| tool-executor | Node.js 18+, configured MCP servers                         |
+| grfp          | None (tool-executor strongly recommended for Gemini access) |
+| klaus         | None                                                        |
+| acm           | None                                                        |
+
 ## Plugins
 
 | Plugin                          | Category       | Description                                                                                         |
