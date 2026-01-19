@@ -34,7 +34,7 @@
         "url": "https://github.com/elb-pr/claudikins-github-readme-for-perfectionists.git"
       },
       "description": "High-quality README creation through dual-AI collaborative analysis. Claude and Gemini analyse your codebase in parallel, research exemplar READMEs, then co-author documentation section by section.",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "name": "claudikins-klaus",
